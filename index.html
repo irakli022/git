@@ -44,6 +44,23 @@
         .logo {
             align-self: center;
         }
+        .nav {
+    display: flex;
+    width: 100%;
+    align-items: left;
+    gap: 400px;
+}
+
+
+.logo-img {
+    width: 60px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
     </style>
 </head>
 <body>
@@ -51,6 +68,7 @@
         <div class="header">
             <div class="text-section">
                 <div class="nav">
+                    <img src="https://www.freeiconspng.com/thumbs/apple-logo-icon/apple-icon-27.png" width="76" height="76" style="display: block;">
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#products">Products</a></li>
@@ -93,15 +111,9 @@
                                     <!-- About Section -->
                                     <div id="about" style="margin: 60px 0; text-align: center;">
                                         <h2>About</h2>
-                                        <p>Welcome to the Apple Store. We offer the latest Apple products with great deals and support.</p>
+                                        <p>Apple Inc. (AAPL) is a leading American technology company founded in 1976 by Steve Jobs and Steve Wozniak. Valued at over $4 trillion as of Oct 2025, it produces consumer electronics (iPhone, Mac, iPad), software (iOS), and services (iCloud, Apple Music). Known for high-end design, the company is a market leader in mobile phones, tablets, and computers.</p>
                                     </div>
-                                    <!-- Support Section -->
-                                    <div id="support" style="margin: 60px 0; text-align: center;">
-                                        <h2>Support</h2>
-                                        <p>Contact us for any support or questions regarding your Apple products.</p>
-                                        <p>Phone: +1 (555) 123-4567</p>
-                                        <p>Email: arthur@applestore.com</p>
-                                    </div>
+
                                     <!-- Cart Section -->
                                     <div id="cart" style="margin: 60px 0; text-align: center;">
                                         <h2>Your Cart</h2>
@@ -113,6 +125,13 @@
                                         <h2>Checkout</h2>
                                         <p>Proceed to payment and complete your order.</p>
                                         <button id="open-form" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">Fill Out Details</button>
+                                    <!-- Support Section -->
+                                    <div id="support" style="margin: 60px 0; text-align: left;">
+                                        <h2>Support</h2>
+                                        <p>Contact us for any support or questions regarding your Apple products.</p>
+                                        <p>Phone: +1 (555) 123-4567</p>
+                                        <p>Email: arthur@applestore.com</p>
+                                    </div>
                                         <!-- Form Page Script -->
                                         <script>
                                             document.getElementById('open-form').addEventListener('click', function() {
@@ -161,7 +180,6 @@
                     </div>
                 </div>
                 </div>
-                <img src="https://www.freeiconspng.com/thumbs/apple-logo-icon/apple-icon-27.png" width="76" height="76" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
                 <!-- Smooth scroll and cart logic -->
                 <script>
                     // Smooth scroll for nav links
