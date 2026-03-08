@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Apple store</title>
+    <link rel="stylesheet" href="index.HTML.css">
+    <style>
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav ul {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav a {
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #555;
+        }
+        .logo {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="text-section">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#cart">Cart</a></li>
+                        <li><a href="#checkout">Checkout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <div id="products" style="display: flex; gap: 20px; justify-content: center; align-items: center; margin-top: 80px;">
+                    <div style="display: flex; flex-direction: row; gap: 20px; justify-content: center; align-items: flex-start;">
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                            <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+                                <p style="font-size: 14px; margin: 5px 0;">MacBook Air</p>
+                                <p style="font-size: 12px; margin: 5px 0;">$1500</p>
+                                <p style="font-size: 12px; margin: 5px 0;">★★★★☆ (4 stars)</p>
+                                <button class="add-to-cart" data-name="MacBook Air" data-price="1500" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
+                            </div>
+                            <img src="https://www.apple.com/v/macbook-air/w/images/overview/hero/hero_static__c9sislzzicq6_large.png" width="250" height="250" style="margin-top: 60px;">
+                            <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+                                <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                            <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+                                <p style="font-size: 14px; margin: 5px 0;">iPhone 17 Pro Max</p>
+                                <p style="font-size: 12px; margin: 5px 0;">$2000</p>
+                                <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
+                                <button class="add-to-cart" data-name="iPhone 17 Pro Max" data-price="2000" data-stock="out" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
+                            </div>
+                            <img src="https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp" width="250" height="250" style="margin-top: 60px;">
+                            <div style="border: 2px solid red; background-color: #fff0f0; padding: 8px 12px; border-radius: 5px;">
+                                <p style="font-size: 12px; margin: 0; color: red; font-weight: bold;">Out of Stock</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <!-- About Section -->
+                                    <div id="about" style="margin: 60px 0; text-align: center;">
+                                        <h2>About</h2>
+                                        <p>Welcome to the Apple Store. We offer the latest Apple products with great deals and support.</p>
+                                    </div>
+                                    <!-- Support Section -->
+                                    <div id="support" style="margin: 60px 0; text-align: center;">
+                                        <h2>Support</h2>
+                                        <p>Contact us for any support or questions regarding your Apple products.</p>
+                                        <p>Phone: +1 (555) 123-4567</p>
+                                        <p>Email: arthur@applestore.com</p>
+                                    </div>
+                                    <!-- Cart Section -->
+                                    <div id="cart" style="margin: 60px 0; text-align: center;">
+                                        <h2>Your Cart</h2>
+                                        <ul id="cart-items" style="list-style: none; padding: 0;"></ul>
+                                        <p id="cart-total" style="font-weight: bold;">Total: $0</p>
+                                    </div>
+                                    <!-- Checkout Section -->
+                                    <div id="checkout" style="margin: 60px 0; text-align: center;">
+                                        <h2>Checkout</h2>
+                                        <p>Proceed to payment and complete your order.</p>
+                                        <button id="open-form" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">Fill Out Details</button>
+                                        <!-- Form Page Script -->
+                                        <script>
+                                            document.getElementById('open-form').addEventListener('click', function() {
+                                                const formHtml = `
+                                                    <h2>Fill Out Your Address, Name, and Phone Number</h2>
+                                                    <form id="order-form" style="display: inline-block; text-align: left; margin-top: 30px;">
+                                                        <label for="name">Name:</label><br>
+                                                        <input type="text" id="name" name="name" style="width: 300px; margin-bottom: 15px;"><br>
+                                                        <label for="address">Address:</label><br>
+                                                        <input type="text" id="address" name="address" style="width: 300px; margin-bottom: 15px;"><br>
+                                                        <label for="phone">Phone Number:</label><br>
+                                                        <input type="text" id="phone" name="phone" style="width: 300px; margin-bottom: 15px;"><br>
+                                                        <button type="submit" style="margin-top: 10px; padding: 8px 20px; font-size: 15px;">Submit</button>
+                                                    </form>
+                                                    <div id="confirmation" style="display:none; margin-top:30px; font-size:18px; color:green;"></div>
+                                                `;
+                                                const newWindow = window.open('', '_blank');
+                                                if (newWindow) {
+                                                    newWindow.document.title = 'Fill Out Your Details';
+                                                    newWindow.document.body.style.fontFamily = 'Arial, sans-serif';
+                                                    newWindow.document.body.style.textAlign = 'center';
+                                                    newWindow.document.body.style.marginTop = '50px';
+                                                    newWindow.document.body.innerHTML = formHtml;
+                                                    // Inject script after HTML is set
+                                                    const script = newWindow.document.createElement('script');
+                                                    script.textContent = `
+                                                        document.getElementById('order-form').addEventListener('submit', function(e) {
+                                                            e.preventDefault();
+                                                            document.getElementById('order-form').style.display = 'none';
+                                                            document.getElementById('confirmation').style.display = 'block';
+                                                            document.getElementById('confirmation').textContent = 'Order has been placed and it will be delivered in 5 business days.';
+                                                        });
+                                                    `;
+                                                    newWindow.document.body.appendChild(script);
+                                                } else {
+                                                    alert('Popup blocked! Please allow popups for this site.');
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <img src="https://www.freeiconspng.com/thumbs/apple-logo-icon/apple-icon-27.png" width="100" height="100" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
+                <!-- Smooth scroll and cart logic -->
+                <script>
+                    // Smooth scroll for nav links
+                    document.querySelectorAll('.nav a').forEach(link => {
+                        link.addEventListener('click', function(e) {
+                            const href = this.getAttribute('href');
+                            if (href.startsWith('#')) {
+                                e.preventDefault();
+                                const section = document.querySelector(href);
+                                if (section) {
+                                    section.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }
+                        });
+                    });
+
+                    // Cart logic
+                    const cart = [];
+                    function updateCart() {
+                        const cartItems = document.getElementById('cart-items');
+                        cartItems.innerHTML = '';
+                        let total = 0;
+                        cart.forEach(item => {
+                            const li = document.createElement('li');
+                            li.textContent = `${item.name} - $${item.price}`;
+                            cartItems.appendChild(li);
+                            total += Number(item.price);
+                        });
+                        document.getElementById('cart-total').textContent = `Total: $${total}`;
+                    }
+                    document.querySelectorAll('.add-to-cart').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const name = this.getAttribute('data-name');
+                            const price = this.getAttribute('data-price');
+                            const stock = this.getAttribute('data-stock');
+                            if (stock === 'out') {
+                                alert(`${name} is out of stock!`);
+                                return;
+                            }
+                            cart.push({ name, price });
+                            updateCart();
+                            // Scroll to cart
+                            document.querySelector('#cart').scrollIntoView({ behavior: 'smooth' });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
