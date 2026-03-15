@@ -105,6 +105,43 @@
                                 <p style="font-size: 12px; margin: 0; color: red; font-weight: bold;">Out of Stock</p>
                             </div>
                         </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+        <p style="font-size: 14px; margin: 5px 0;">iPad</p>
+        <p style="font-size: 12px; margin: 5px 0;">$499</p>
+        <p style="font-size: 12px; margin: 5px 0;">★★★★☆ (4 stars)</p>
+        <button class="add-to-cart" data-name="iPad" data-price="499" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
+    </div>
+    <img src="https://imgstore.alta.ge/images/c5a3599d-419b-4281-9d83-c16badf9afe0_Thumb.png" width="250" height="250" style="margin-top: 60px;">
+    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+        <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
+    </div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+        <p style="font-size: 14px; margin: 5px 0;">iPhone 16 pro max</p>
+        <p style="font-size: 12px; margin: 5px 0;">$1699</p>
+        <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
+        <button class="add-to-cart" data-name="iPhone 16 pro max" data-price="1699" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQku9zdAd7mLeDMtOaBoRHPZzKgMBLhi9JSUg&s" width="250" height="250" style="margin-top: 60px;">
+    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+        <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
+    </div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+        <p style="font-size: 14px; margin: 5px 0;">AirPods Pro</p>
+        <p style="font-size: 12px; margin: 5px 0;">$249</p>
+        <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
+        <button class="add-to-cart" data-name="AirPods Pro" data-price="249" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
+    </div>
+    <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83" width="250" height="250" style="margin-top: 60px;">
+    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+        <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
+    </div>
+</div>
+                            </div>
                     </div>
                 </div>
                                     <!-- About Section -->
@@ -113,7 +150,7 @@
                                         <p>Apple Inc. (AAPL) is a leading American technology company founded in 1976 by Steve Jobs and Steve Wozniak. Valued at over $4 trillion as of Oct 2025, it produces consumer electronics (iPhone, Mac, iPad), software (iOS), and services (iCloud, Apple Music). Known for high-end design, the company is a market leader in mobile phones, tablets, and computers.</p>
                                     </div>
                                     <!-- Support Section -->
-                                    <div id="support" style="margin: 60px 0; text-align: left;">
+                                    <div id="support" style="margin: 60px;text-align: left;">
                                         <h2>Support</h2>
                                         <p>Contact us for any support or questions regarding your Apple products.</p>
                                         <p>Phone: +1 (555) 123-4567</p>
@@ -189,7 +226,11 @@
                         // Product image lookup
                         const productImages = {
                             'MacBook Air': 'https://www.apple.com/v/macbook-air/w/images/overview/hero/hero_static__c9sislzzicq6_large.png',
-                            'iPhone 17 Pro Max': 'https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp'
+                            'iPhone 17 Pro Max': 'https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp',
+                            'iPad': 'https://imgstore.alta.ge/images/c5a3599d-419b-4281-9d83-1c6badf9afe0_Thumb.png',
+                            'iPhone 16 pro max': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-16-pro-max-blue',
+                            'AirPods Pro': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83'
+
                         };
                         // Prepare cart HTML
                         let cartHtml = `<h2>Your Cart</h2><div style='display:flex;flex-direction:column;align-items:center;'>`;
