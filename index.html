@@ -18,7 +18,7 @@
             flex-direction: column;
             width: 100%;
             align-items: center;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            background: linear-gradient(135deg, #f50808 0%, #16035c 100%);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -35,15 +35,22 @@
             font-size: 20px;
             font-weight: 600;
             text-decoration: none;
-            color: #333;
+            color: #f8f6f6;
             transition: color 0.3s;
         }
         .nav a:hover {
-            color: #555;
+            color: #c04a4a;
         }
         .logo {
             align-self: center;
         }
+        body {
+  background-color: #ffffff; 
+  background-image: url('background.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
         .nav {
     display: flex;
     width: 100%;
@@ -82,7 +89,7 @@
                 <div id="products" style="display: flex; gap: 20px; justify-content: center; align-items: center; margin-top: 80px;">
                     <div style="display: flex; flex-direction: row; gap: 20px; justify-content: center; align-items: flex-start;">
                         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                            <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+                            <div style="border: 1px solid #146b31; background-color: #08c0ee; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
                                 <p style="font-size: 14px; margin: 5px 0;">MacBook Air</p>
                                 <p style="font-size: 12px; margin: 5px 0;">$1500</p>
                                 <p style="font-size: 12px; margin: 5px 0;">★★★★☆ (4 stars)</p>
@@ -94,50 +101,39 @@
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                            <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+                            <div style="border: 1px solid #ff0404; background-color: #fa9704; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
                                 <p style="font-size: 14px; margin: 5px 0;">iPhone 17 Pro Max</p>
                                 <p style="font-size: 12px; margin: 5px 0;">$2000</p>
                                 <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
                                 <button class="add-to-cart" data-name="iPhone 17 Pro Max" data-price="2000" data-stock="out" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
                             </div>
                             <img src="https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp" width="250" height="250" style="margin-top: 60px;">
-                            <div style="border: 2px solid red; background-color: #fff0f0; padding: 8px 12px; border-radius: 5px;">
+                            <div style="border: 2px solid red; background-color: #ffffff; padding: 8px 12px; border-radius: 5px;">
                                 <p style="font-size: 12px; margin: 0; color: red; font-weight: bold;">Out of Stock</p>
                             </div>
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+    <div style="border: 1px solid #24e70b; background-color: #313030; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
         <p style="font-size: 14px; margin: 5px 0;">iPad</p>
         <p style="font-size: 12px; margin: 5px 0;">$499</p>
         <p style="font-size: 12px; margin: 5px 0;">★★★★☆ (4 stars)</p>
         <button class="add-to-cart" data-name="iPad" data-price="499" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
     </div>
     <img src="https://imgstore.alta.ge/images/c5a3599d-419b-4281-9d83-c16badf9afe0_Thumb.png" width="250" height="250" style="margin-top: 60px;">
-    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+    <div style="border: 2px solid green; background-color: #f3f5f3; padding: 8px 12px; border-radius: 5px;">
         <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
+    </div>
     </div>
 </div>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
-        <p style="font-size: 14px; margin: 5px 0;">iPhone 16 pro max</p>
-        <p style="font-size: 12px; margin: 5px 0;">$1699</p>
-        <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
-        <button class="add-to-cart" data-name="iPhone 16 pro max" data-price="1699" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
-    </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQku9zdAd7mLeDMtOaBoRHPZzKgMBLhi9JSUg&s" width="250" height="250" style="margin-top: 60px;">
-    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
-        <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
-    </div>
-</div>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <div style="border: 1px solid #ccc; background-color: #f9f9f9; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
+    <div style="border: 1px solid #00d841; background-color: #ffffff; padding: 15px; border-radius: 8px; width: 250px; text-align: center;">
         <p style="font-size: 14px; margin: 5px 0;">AirPods Pro</p>
         <p style="font-size: 12px; margin: 5px 0;">$249</p>
         <p style="font-size: 12px; margin: 5px 0;">★★★★★ (5 stars)</p>
         <button class="add-to-cart" data-name="AirPods Pro" data-price="249" style="font-size: 12px; padding: 5px 10px;">Add to Cart</button>
     </div>
     <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83" width="250" height="250" style="margin-top: 60px;">
-    <div style="border: 2px solid green; background-color: #f0fff0; padding: 8px 12px; border-radius: 5px;">
+    <div style="border: 2px solid green; background-color: #f0fff0; padding: 4px 6px; border-radius: 3px;">
         <p style="font-size: 12px; margin: 0; color: green; font-weight: bold;">In Stock</p>
     </div>
 </div>
@@ -228,7 +224,6 @@
                             'MacBook Air': 'https://www.apple.com/v/macbook-air/w/images/overview/hero/hero_static__c9sislzzicq6_large.png',
                             'iPhone 17 Pro Max': 'https://www.mobileana.com/wp-content/uploads/2025/06/Apple-iPhone-17-Pro-Max-Cosmic-Orange.webp',
                             'iPad': 'https://imgstore.alta.ge/images/c5a3599d-419b-4281-9d83-1c6badf9afe0_Thumb.png',
-                            'iPhone 16 pro max': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-16-pro-max-blue',
                             'AirPods Pro': 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQD83'
 
                         };
